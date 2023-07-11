@@ -1,0 +1,76 @@
+/* color pattern */
+:root {
+    --background-menu: rgb(48, 184, 184);
+    --text-menu: rgb(65, 255, 255);
+    --menu-hover: rgb(15, 168, 168);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+    display: flex;
+    background-color: var(--background-menu);
+    justify-content: space-evenly;
+    padding: 15px 0;
+    color: var(--text-menu);
+}
+
+nav .menuTab {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: var(--text-menu);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover {
+    color: var(--menu-hover);
+}
+
+/*Hamburger Menu */
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--text-menu);
+}
+
+/* Responsive breakpoint */
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran Smartphone potrait */
+@media screen and (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+}
