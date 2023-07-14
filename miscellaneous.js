@@ -1,8 +1,6 @@
-var checker = document.querySelector('.menu-toggle');
+const menuToggle = document.querySelector('.menu-toggle input');
+const nav = document.querySelector('nav ul');
 
-checker.addEventListener('click', function() {
-    if (checker.classList.contains('active')) {
-        console.log("Animasi nutup")
-    }
-    console.log("animasi buka")
-})
+menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('slide');
+});
