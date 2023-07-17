@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var sections = document.getElementsByTagName('section');
     var currentSection = 0;
+    var isScrolling = false;
     
     function scrollToSection(index) {
       if (sections[index]) {
@@ -8,20 +9,38 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSection = index;
       }
     }
+
+    function debounce(func, delay) {
+      var timeout;
+      return function() {
+        var context = this;
+        var args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+          func.apply(context, args);
+        }, delay);
+      };
+    }
     
     function scrollHandler(event) {
-      event.preventDefault();
+      if (isScrolling) return;
+      isScrolling = true;
+
       var direction = event.deltaY > 0 ? 1 : -1;
       var nextSection = currentSection + direction;
       
       if (nextSection >= 0 && nextSection < sections.length) {
         scrollToSection(nextSection);
       }
+
+      setTimeout(function() {
+        isScrolling = false;
+      }, 1000);
     }
     
     function setScrollListener() {
-      window.addEventListener('wheel', scrollHandler, { passive: false });
-      window.addEventListener('touchmove', scrollHandler, { passive: false });
+      window.addEventListener('wheel', debounce(scrollHandler, 0), { passive: false });
+      window.addEventListener('touchmove', debounce(scrollHandler, 0), { passive: false });
     }
     
     if (document.readyState === 'complete') {
