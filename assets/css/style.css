@@ -1,0 +1,94 @@
+/* color pattern */
+:root {
+    --text-menu: rgb(255, 255, 255);
+    --menu-hover: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+
+/* Navigation */
+.navigation-wrapper {
+    display: flex;
+    position: fixed;
+    padding: auto 80px;
+    color: var(--text-menu);
+    height: 100vh;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0 auto;
+    z-index: -2;
+    transform: translateX(-100%);
+    transition: 0.8s;
+}
+
+.menu-list.slide {
+    transform: translateX(0);
+}
+
+.menu-list li {
+    padding: 0 0 20px 50px;
+}
+
+.menu-list a {
+    display: block;
+    color: var(--text-menu);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    color: var(--menu-hover);
+}
+
+
+/* video background home setup */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+/* Responsive breakpoint */
+/* menu handphone */
+@media screen and (max-width: 560px) {
+    nav ul {
+        background-image: linear-gradient(90deg, 
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 0.9) 20%,
+        rgba(0, 0, 0, 0.8) 30%, 
+        rgba(0, 0, 0, 0.7) 40%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.5) 60%, 
+        rgba(0, 0, 0, 0.4) 70%, 
+        rgba(0,0,0,0.005) 100%);
+        width: 45%;
+    }
+    nav {
+        height: 100vh;
+    }
+}
