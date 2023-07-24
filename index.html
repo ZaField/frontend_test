@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap');
+        </style>            
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="navigation-wrapper">
+            <svg width="20%" class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="white" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+                <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+                <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+                </path>
+                <rect width="10" height="10" stroke="none">
+                <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                </rect>
+                <rect width="10" height="10" stroke="none">
+                <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                </rect>
+            </svg>
+            <div class="menu-wrapper">
+                <ul class="menu-list">
+                    <li><span><a href="#home">Home</a></span></li>
+                    <li><span><a href="#news">News</a></span></li>
+                    <li><span><a href="#data">Data</a></span></li>
+                    <li><span><a href="#media">Media</a></span></li>
+                    <li><span><a href="#wallpaper">Wallpaper</a></span></li>
+                    <li><span><a href="#other">Other</a></span></li>
+                    <li><span><a href="#features">Features</a></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-container">            
+            <section id="home">
+                <video src="assets/videos/background test.mp4" 
+                autoplay loop muted class="background-video"></video>
+            </section>
+    
+            <section id="character">
+                <h4>testing character</h4>
+            </section>
+    
+            <section id="lore">
+                <h4>testing lore</h4>
+            </section>
+    
+            <section id="gallery">
+                <div class="carousel">
+                    <img src="assets/images/hasumi.png" alt="character 1">
+                    <img src="assets/images/takaoka.png" alt="character 2">
+                    <img src="assets/images/izumi.png" alt="character 3">
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/misc.js"></script>
+</html>
