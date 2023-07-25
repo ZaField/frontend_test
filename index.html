@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="navigation-wrapper">
-            <svg width="20%" class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="white" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+            <svg width="15%" class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="white" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
                 <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
                 <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
                 <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
@@ -26,8 +26,9 @@
                 </rect>
             </svg>
             <div class="menu-wrapper">
+                <div class="menu-slider"></div>
                 <ul class="menu-list">
-                    <li><span><a href="#home">Home</a></span></li>
+                    <li><span class="active"><a href="#home">Home</a></span></li>
                     <li><span><a href="#news">News</a></span></li>
                     <li><span><a href="#data">Data</a></span></li>
                     <li><span><a href="#media">Media</a></span></li>
@@ -43,12 +44,12 @@
                 autoplay loop muted class="background-video"></video>
             </section>
     
-            <section id="character">
-                <h4>testing character</h4>
+            <section id="news" class="test">
+                <h4>News</h4>
             </section>
     
-            <section id="lore">
-                <h4>testing lore</h4>
+            <section id="data">
+                <h4>Data</h4>
             </section>
     
             <section id="gallery">

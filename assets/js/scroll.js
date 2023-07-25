@@ -54,15 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         var previousSection = currentSection - 1;
         if (previousSection >= 0) {
+          console.log(previousSection)
           scrollToSection(previousSection);
         }
       } else if (event.key === 'ArrowDown') {
         event.preventDefault();
         var nextSection = currentSection + 1;
         if (nextSection < sections.length) {
+          console.log(nextSection)
           scrollToSection(nextSection);
         }
       }
     });
   });
-  

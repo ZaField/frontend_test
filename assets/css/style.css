@@ -1,7 +1,7 @@
 /* color pattern */
 :root {
     --text-menu: rgb(255, 255, 255);
-    --menu-hover: rgb(0, 0, 0);
+    --menu-hover: rgba(255, 255, 255, .5);
 }
 
 * {
@@ -12,16 +12,23 @@
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    overflow: hidden;
+    overflow: hidden;       
 }
 
 section {
     height: 100vh;
     width: 100%;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
+    /* animation: scrollAnimation 1s ease 0s forwards; */
 }
 
+/* section.active {
+    animation: scrollAnimation 1s ease 0s forwards;
+} */
 
+.test {
+    background-color: green;
+}
 /* Navigation */
 .navigation-wrapper {
     display: flex;
@@ -29,18 +36,35 @@ section {
     padding: auto 80px;
     color: var(--text-menu);
     height: 100vh;
+    width: max-content;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+    max-width: 500px;
+}
 
+.navigation-wrapper svg.hb{
+    max-width: 100%;
+}
+
+.menu-wrapper {
+    padding:1vh ;
 }
 
 .menu-list {
+    /* display: inline-block; */
+    text-align: left;
+    border-left: 1px solid rgba(255,255,255,.5);;
     list-style: none;
-    margin: 0 auto;
-    z-index: -2;
-    transform: translateX(-100%);
+    z-index: 2;
+    transform: translateX(-200%);
     transition: 0.8s;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 10px;
+    margin-inline-end: 0px;
+    padding-inline-start: 5px;
+    padding-top: 1em;
 }
 
 .menu-list.slide {
@@ -48,7 +72,8 @@ section {
 }
 
 .menu-list li {
-    padding: 0 0 20px 50px;
+    padding: 0 0 20px 0;
+    margin: 10px;
 }
 
 .menu-list a {
@@ -58,10 +83,36 @@ section {
     font-size: 1em;
 }
 
-nav ul li a:hover {
+.menu-list a:hover {
     color: var(--menu-hover);
 }
 
+.menu-list li span::after {
+    content: '';
+    display: block;
+    position: relative;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: red; /* Change this to the color you want for the underline */
+    transition: width 0.8s ease-in-out;
+}
+
+.menu-list li span.active::after {
+    width: 100%;    
+}
+
+.menu-list li span a {
+    scale: 1;
+    padding-left: 5px;
+}
+
+
+.menu-list li span.active a {
+    scale: 1.2;
+
+}
 
 /* video background home setup */
 .background-video {
@@ -92,3 +143,33 @@ nav ul li a:hover {
         height: 100vh;
     }
 }
+
+/* Animation */
+
+@keyframes scrollAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    10% {
+        opacity: 10;
+        transform: translateY(90%);
+    }
+
+    20% {
+        opacity: 20;
+        transform: translateY(80%);
+    }
+
+    20% {
+        opacity: 30;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+
