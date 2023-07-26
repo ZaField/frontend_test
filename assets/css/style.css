@@ -1,8 +1,7 @@
-/* color pattern */
 :root {
-    --text-menu: rgb(255, 255, 255);
-    --menu-hover: rgba(255, 255, 255, .5);
+    --text-menu: rgb(255, 255, 255)
 }
+
 
 * {
     margin: 0;
@@ -10,37 +9,81 @@
     box-sizing: border-box;
 }
 
+html, body {
+    position: relative;
+    height: 100%;
+}
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     overflow: hidden;       
 }
 
-section {
-    height: 100vh;
-    width: 100%;
-    /* scroll-snap-type: y mandatory; */
-    /* animation: scrollAnimation 1s ease 0s forwards; */
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	/* -webkit-justify-content: center; */
+	/* justify-content: start; */
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
 }
 
-/* section.active {
-    animation: scrollAnimation 1s ease 0s forwards;
-} */
-
-.test {
-    background-color: green;
+.swiper-pagination {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: auto !important;
+	left: auto !important;
+	margin: 0;
 }
-/* Navigation */
+.swiper-pagination-bullet {
+	padding: 5px 10px;
+	border-radius: 0;
+	width: auto;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color:#000;
+	opacity: 1;
+	background: rgba(0,0,0,0.2);
+}
+.swiper-pagination-bullet-active {
+	color:#fff;
+	background: #007aff;
+}
+
+
 .navigation-wrapper {
     display: flex;
     position: fixed;
-    padding: auto 80px;
+    padding: auto 10px;
     color: var(--text-menu);
     height: 100vh;
-    width: max-content;
+    flex: 1;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    max-width: 500px;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 25%; /* Set a percentage width */
+    min-width: 200px;
 }
 
 .navigation-wrapper svg.hb{
@@ -52,7 +95,6 @@ section {
 }
 
 .menu-list {
-    /* display: inline-block; */
     text-align: left;
     border-left: 1px solid rgba(255,255,255,.5);;
     list-style: none;
@@ -103,6 +145,10 @@ section {
     width: 100%;    
 }
 
+.menu-list li.active::before {
+    opacity: 1;
+}
+
 .menu-list li span a {
     scale: 1;
     padding-left: 5px;
@@ -111,65 +157,44 @@ section {
 
 .menu-list li span.active a {
     scale: 1.2;
-
 }
 
-/* video background home setup */
+
+.home-logo {
+    display: flex;
+    position: absolute;
+    margin-top: 7vh;
+    margin-left: 1vw;
+    align-self: flex-start;
+}
+
+.gradual-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    /* background-color: #000; */
+    background: linear-gradient(to bottom,transparent,rgba(0,0,0,.85));
+    pointer-events: none
+}
+
+.left-gradual-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20vh;
+    height: 100%;
+    background: linear-gradient(to left,transparent,rgba(0,0,0,.5));
+    pointer-events: none
+}
+
 .background-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
     object-fit: cover;
 }
-/* Responsive breakpoint */
-/* menu handphone */
-@media screen and (max-width: 560px) {
-    nav ul {
-        background-image: linear-gradient(90deg, 
-        rgba(0, 0, 0, 1) 10%,
-        rgba(0, 0, 0, 0.9) 20%,
-        rgba(0, 0, 0, 0.8) 30%, 
-        rgba(0, 0, 0, 0.7) 40%,
-        rgba(0, 0, 0, 0.6) 50%,
-        rgba(0, 0, 0, 0.5) 60%, 
-        rgba(0, 0, 0, 0.4) 70%, 
-        rgba(0,0,0,0.005) 100%);
-        width: 45%;
-    }
-    nav {
-        height: 100vh;
-    }
-}
-
-/* Animation */
-
-@keyframes scrollAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-
-    10% {
-        opacity: 10;
-        transform: translateY(90%);
-    }
-
-    20% {
-        opacity: 20;
-        transform: translateY(80%);
-    }
-
-    20% {
-        opacity: 30;
-        transform: translateY(70%);
-    }
-
-    100% {
-        opacity: 100;
-        transform: translateY(0);
-    }
-}
-
