@@ -1,4 +1,4 @@
-var swiper = new Swiper ('.swiper-container', {
+var swiper = new Swiper ('#section-wrapper', {
     // If we need pagination
     direction: "vertical",
     slidesPerView: "auto",
@@ -36,4 +36,9 @@ menu_items.forEach((item, index)=> {
     item.parentNode.classList.add('active');
     swiper.slideTo(index);
   });
+});
+
+const features_swiper_container = document.querySelector('#features-swiper');
+const features_wrapper = features_swiper_container.querySelector('.swiper-wrapper');
+const features_slide = features_wrapper.querySelectorAll('.swiper-slide');
 });
