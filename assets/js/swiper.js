@@ -41,3 +41,4 @@ menu_items.forEach((item, index)=> {
 const features_swiper_container = document.querySelector('#features-swiper');
 const features_wrapper = features_swiper_container.querySelector('.swiper-wrapper');
 const features_slide = features_wrapper.querySelectorAll('.swiper-slide');
+});

@@ -1,72 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap');
-        </style>            
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <div class="navigation-wrapper">
-            <svg width="20%" class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="white" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
-                <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
-                <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
-                <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
-                </path>
-                <rect width="10" height="10" stroke="none">
-                <animate dur="2s" id="reverse" attributeName="width" begin="click" />
-                </rect>
-                <rect width="10" height="10" stroke="none">
-                <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
-                <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
-                </rect>
-            </svg>
-            <div class="menu-wrapper">
-                <ul class="menu-list">
-                    <li><span><a href="#home">Home</a></span></li>
-                    <li><span><a href="#news">News</a></span></li>
-                    <li><span><a href="#data">Data</a></span></li>
-                    <li><span><a href="#media">Media</a></span></li>
-                    <li><span><a href="#wallpaper">Wallpaper</a></span></li>
-                    <li><span><a href="#other">Other</a></span></li>
-                    <li><span><a href="#features">Features</a></span></li>
-                </ul>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap');
+    </style> 
+    <title>Punishing Gray Raven</title>
+</head>
+<body>
+    <div class="navigation-wrapper">
+        <div class="gradual-mask"></div>
+        <div class="left-gradual-mask"></div>
+        <svg width="15%" class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="white" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+            <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+            <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+            <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+            </path>
+            <rect width="10" height="10" stroke="none">
+            <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+            </rect>
+            <rect width="10" height="10" stroke="none">
+            <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+            <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+            </rect>
+        </svg>
+        <div class="menu-wrapper">
+            <div class="menu-slider"></div>
+            <ul class="menu-list">
+                <li><span class="active"><a href="#home">Home</a></span></li>
+                <li><span><a href="#news">News</a></span></li>
+                <li><span><a href="#data">Data</a></span></li>
+                <li><span><a href="#media">Media</a></span></li>
+                <li><span><a href="#wallpaper">Wallpaper</a></span></li>
+                <li><span><a href="#other">Other</a></span></li>
+                <li><span><a href="#features">Features</a></span></li>
+            </ul>
         </div>
-<<<<<<< Updated upstream
-        <div class="section-container">            
-            <section id="home">
-=======
     </div>
     <div class="swiper-container" id="section-wrapper">
         <div class="swiper-wrapper">
             <section class="swiper-slide">
->>>>>>> Stashed changes
                 <video src="assets/videos/background test.mp4" 
-                autoplay loop muted class="background-video"></video>
+                autoplay loop muted class="background-video">Home</video>
+                <img src="assets/images/pgr-logo.png" alt="PGR-LOGO" class="home-logo">
             </section>
-    
-            <section id="character">
-                <h4>testing character</h4>
-            </section>
-    
-            <section id="lore">
-                <h4>testing lore</h4>
-            </section>
-    
-            <section id="gallery">
-                <div class="carousel">
-                    <img src="assets/images/hasumi.png" alt="character 1">
-                    <img src="assets/images/takaoka.png" alt="character 2">
-                    <img src="assets/images/izumi.png" alt="character 3">
+            <section class="swiper-slide">
+                <div class="news">
+                    <div class="left-banner"></div>
+                    <div class="right-news"></div>
+                    <div class="seq"></div>
                 </div>
             </section>
-<<<<<<< Updated upstream
-=======
             <section class="swiper-slide">Data</section>
             <section class="swiper-slide">Media</section>
             <section class="swiper-slide">Wallapaper</section>
@@ -84,9 +73,10 @@
                 </div>
               </div>
             </section>
->>>>>>> Stashed changes
         </div>
-    </body>
-    <script src="assets/js/scroll.js"></script>
-    <script src="assets/js/misc.js"></script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+</body>
 </html>
