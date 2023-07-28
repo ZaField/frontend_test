@@ -66,8 +66,6 @@ body {
 	background: #007aff;
 }
 
-
-
 /* Navigation Bar */
 .navigation-wrapper {
     display: flex;
@@ -79,12 +77,12 @@ body {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    z-index: 5;
+    z-index: 999;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 25%;
-    min-width: 200px;
+    width: 35%;
+    min-width: 100px;
 }
 
 .navigation-wrapper svg.hb{
@@ -217,6 +215,8 @@ body {
     width: 100vw;
     height: 100%;
     background-image: url("../images/news-bg.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 .left-banner {
@@ -235,4 +235,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+/* Data */
+.data {
+    width: 100%;
+    height: 100vw;
+    background-image: url("../images/news-bg.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
