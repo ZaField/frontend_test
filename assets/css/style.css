@@ -73,7 +73,6 @@ nav ul li a:hover {
     z-index: -1;
     object-fit: cover;
 }
-<<<<<<< Updated upstream
 /* Responsive breakpoint */
 /* menu handphone */
 @media screen and (max-width: 560px) {
@@ -92,7 +91,6 @@ nav ul li a:hover {
     nav {
         height: 100vh;
     }
-=======
 
 /* News */
 .news {
@@ -125,5 +123,4 @@ nav ul li a:hover {
     height: 100vh;
     background-image: url("../images/feature-bg.png");
     background-size: 100% auto;
->>>>>>> Stashed changes
-}
+}}
