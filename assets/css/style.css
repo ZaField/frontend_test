@@ -28,7 +28,6 @@ body {
 .swiper-slide {
 	text-align: center;
 	font-size: 18px;
-	background: #fff;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
@@ -241,6 +240,23 @@ body {
 .features {
     width: 100vw;
     height: 100vh;
-    background-image: url("../images/feature-bg.png");
-    background-size: 100% auto;
+    background-size: 100%;
+    background-image: url("../images/feature_sc/feature-bg.png");
+}
+
+#features-swiper {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#features-swiper .swiper-slide {
+    scale: 0.7;
+}
+
+.features-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
